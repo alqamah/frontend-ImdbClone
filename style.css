@@ -1,0 +1,253 @@
+:root {
+    --yl: #FFD700;
+  }
+/* this is the css for body , the background color is given as black */
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+    background-blend-mode: multiply;
+    background-size:cover;
+    color: rgb(255, 255, 255);
+}
+/* header section css */
+#header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(17, 17, 17);
+    z-index: 10;
+}
+/* setting the width and height of the logo  */
+#logodiv{
+    width: 150px;
+    height: 100px;
+}
+#logoimg{
+    width: 100%;
+    height: 100%;
+}
+/* setting the width of  the search bar  */
+#search-bar{
+    width: 35%;
+}
+.search-conten{
+    border-radius: 20px;
+    top: 15px;
+}
+#search-area{
+    border-radius: 5px;
+    background-color: #373737;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/* styling the input section of the search function  */
+#search-area input{
+    color: #c1c1c1;
+    background-color: #12121200;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+    padding: 7px;
+    outline: none;
+}
+
+#search-icon{
+    transform: translateX(-20px);
+    color: var(--yl);
+}
+
+/* the result of the search  */
+.results{
+    padding: 0px;
+    max-height: 600px;
+    overflow-y: scroll;
+}
+.results ul{
+    padding: 0px;
+    margin: 0px;
+}
+.results ul li{
+    list-style: none;
+    padding: 5px 15px;
+    opacity: 0;
+    display: none;
+    border-radius: 3px;
+}
+
+/* css to the fav btn to neg to fav section */
+#right-section{
+    display: flex;
+    justify-content: space-around;
+    margin: 0px 20px;
+}
+#right-section button{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.174);
+    color: white;
+    background:none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px 20px;
+    transition: .3s ease-in-out;
+}
+#right-section button:hover, #right-section select:hover{
+    color: #ffffff;
+    border: 2px solid var(--yl);
+    text-shadow: 0 0 10px white;
+}
+#my-list a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* all movies cards  */
+#movie-container{
+    margin: auto;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.movie-element{
+    opacity: 80%;
+    margin: 10px;
+    transition: .3s ease-in-out;
+    border-bottom: 2px solid rgba(255, 255, 255, 0);
+    background-color: #121212;
+    border-radius: 10px;
+}
+.movie-poster{
+    height: 290px;
+    width: 200px;
+}
+.movie-element:hover{
+    border-radius: 0px;
+    opacity: 100%;
+    border-bottom: 2px solid white;
+}
+.movie-element:hover >.movie-title{
+    text-shadow: 0px 0px 10px white;
+}
+
+.movie-poster img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 0px 0px;
+    transition: all .2s ease-in;
+}
+/* name of the movie  */
+.movie-title{
+    height: fit-content ;
+    padding: 5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 150px;
+    margin: 5px;
+    margin-top: 15px;
+    text-align: left;
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.movie-element-tags{
+    margin: 10px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+/* movie rating  */
+.movie-rating, .add-movie-to-list{
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.movie-rating i{
+    color: gold;
+}
+
+.add-movie-to-list{
+    color: #6b6b6b;
+}
+.add-movie-to-list:hover{
+    color: rgb(191, 96, 123);
+}
+/* prev and next button  */
+.page-navigation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page-navigation button{
+    color: #3e3e3e;
+    background-color: var(--yl);
+    font-size: 1.5rem;
+    margin: 10px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
+}
+.page-navigation button:hover{
+    background-color: wheat;
+}
+.page-navigation button[disabled]{
+    display: none;
+}
+
+/* responsiveness and media queries */
+@media screen and (max-width:950px) {
+    #logo{
+        width: 200px;
+        height: auto;
+    }
+}
+/* when the screen size is 700 and less  */
+@media screen and (max-width:700px) {
+    #header{
+        flex-direction: column;
+    }
+    #page-heading{
+        padding-top: 140px;
+    }
+    #right-section{
+        margin: 10px;
+    }
+    #search-bar{
+        margin: 10px;
+    }
+    #back-to-home{
+        top: 15px;
+        left: 15px;
+        margin: 0;
+    }
+}
+@media screen and (max-width:700px) {
+    #page-heading{
+        font-size: 4rem;
+    }
+}
+/* when the screen size is 550 and less  */
+@media screen and (max-width:550px) {
+    #page-heading{
+        font-size: 4.5rem;
+        padding-top: 140px;
+    }
+    .page-navigation{
+        flex-direction: column;
+    }
+}
+/* when the screen size is 380 and less  */
+@media screen and (max-width:380px) {
+    #page-heading{
+        padding-top: 150px;
+    }
+}
+
+/*Alqama Hasnain, Coding Ninjas FE Project*/

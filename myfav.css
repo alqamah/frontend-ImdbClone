@@ -1,0 +1,150 @@
+body{
+    background: linear-gradient(rgb(244, 217, 182),white);
+    padding: 0px;
+    min-height: 100vh;
+    height: fit-content;
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+#heading{
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+    font-size: 3rem;
+    font-weight: 600;
+    font-family:'Dosis', sans-serif;
+    font-family:'Oswald', sans-serif;
+    font-family:'Abel', sans-serif;
+    font-family:'Barlow Condensed', sans-serif;
+    background-color: #ea9085;
+    border-bottom: solid 5px #ea9;
+    border-top: solid 5px rgb(237, 188, 176);
+    color: rgb(53, 53, 53);
+}
+
+#home{
+    border-radius: 5px;
+    background-color: antiquewhite;
+    border: none;
+    transition: all .3s ease-in-out;
+}
+
+#home:hover{
+    background-color: white;
+}
+
+#home:hover #bbtn{
+    transition: .2s linear;
+    transform: scale(1.2);
+    color:black;
+    background-color: white;
+}
+
+#bbtn{
+    font-size: 2rem;
+    color: #ea9085;
+}
+
+#clear-whole-list{
+    font-family:'Dosis', sans-serif;
+    font-weight: 600;
+}
+
+#btns button{
+    color: black;
+    background-color: antiquewhite;
+    padding: 10px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 3px solid rgba(237, 93, 93, 0);
+    transition: all 0.3s ease-in-out;
+}
+
+#btns button:hover{
+    background-color: white;
+    color:#813329;
+    border-bottom: 3px solid #ed5d5d;
+    cursor: pointer;
+}
+
+#list-container{
+    margin: auto;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.list-item{
+    margin:10px;
+    border-radius: 20px;
+    background-color: peachpuff;
+    transition: all .2s ease-in-out;
+    border-bottom: 2px solid rgba(72, 72, 72, 0);
+
+}
+
+.movie-poster{
+    height: 410px;
+    width: 280px;
+}
+
+.list-item:hover{
+    background-color: white;
+    border-radius: 0px;
+    opacity: 95%;
+    border-bottom: 2px solid rgb(72, 72, 72);
+}
+
+.movie-element:hover >.movie-title{
+    text-shadow: 0px 0px 10px white;
+}
+
+.movie-poster img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 0px 0px;
+    transition: all .2s ease-in;
+}
+
+.movie-title{
+    background-color: rgba(255, 255, 255, 0.411);
+    font-family:'Abel', sans-serif;
+    height: fit-content ;
+    padding: 5%;
+    max-width: 250px;
+    margin: 5px;
+    margin-top: 15px;
+    text-align: left;
+    font-size: 1.7rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.movie-element-tags{
+    margin: 10px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.movie-rating{
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    font-family:'Abel', sans-serif;
+}
+
+#removeicon{
+    font-size: 1.6rem;
+    color: rgb(86, 80, 80);
+}
+
+#removeicon:hover{
+    cursor:pointer;
+    color: rgb(216, 86, 86);
+}
