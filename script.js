@@ -1,7 +1,8 @@
 // this is the api key
-const APIKEY = 'api_key=96c05c6f53c2f9b20b3e42af4887dc76';
+//const APIKEY = 'api_key=96c05c6f53c2f9b20b3e42af4887dc76';
 // this is the home url 
-const HOMEURL = `https://api.themoviedb.org/3/discover/movie?${APIKEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate`;
+//const HOMEURL = `https://api.themoviedb.org/3/discover/movie?${APIKEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate`;
+const HOMEURL = `http://www.omdbapi.com/?i=tt3896198&apikey=8eff6285`;
 // this is the image url 
 const IMAGEURL = 'https://image.tmdb.org/t/p/w500';
 
